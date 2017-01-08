@@ -3,31 +3,31 @@ var person = {
 	sayHi: function(){
 		console.log("Hi " + this.firstName);
 	},
-	determineCotext: function(){
+	verifyThis: function(){
 		console.log("this === person: " + (this === person));
 	},
 	computer:{
 		sayHello: function(){
 			console.log("Hello " + this.firstName);
 		},
-		determineCotext: function(){
+		verifyThis: function(){
 			console.log("this === person: " + (this === person));
 		}
 	}
 }
 
 person.sayHi();
-person.determineCotext();
+person.verifyThis();
 
 console.log("\n=====================\nWITHOUT CALL FUNCTION\n=====================\n");
 
 person.computer.sayHello();
-person.computer.determineCotext();
+person.computer.verifyThis();
 
 console.log("\n==================\nWITH CALL FUNCTION\n==================\n");
 
 person.computer.sayHello.call(person);
-person.computer.determineCotext.call(person);
+person.computer.verifyThis.call(person);
 
 console.log("\n======================\nUSING CALL FOR METHODS\n======================\n")
 
