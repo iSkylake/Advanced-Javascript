@@ -28,3 +28,18 @@ console.log("\n==================\nWITH CALL FUNCTION\n==================\n");
 
 person.computer.sayHello.call(person);
 person.computer.determineCotext.call(person);
+
+console.log("\n======================\nUSING CALL FOR METHODS\n======================\n")
+
+var llorch = {
+	firstName: "Llorch",
+	addition: function(a, b, c, d){
+		console.log(this.firstName + " calculated: " + (a+b+c+d));
+	}
+}
+
+var hana = {
+	firstName: "Hana"
+}
+
+llorch.addition.call(hana, 1, 2, 3, 4);
