@@ -8,8 +8,15 @@ var llorch = {
 	},
 	bindTimeOut: function(){
 		setTimeout(function(){
+			console.log("\n======================\nSET TIME OUT WITH BIND\n======================\n");
 			console.log("Hi " + this.firstName + " it binds");
 		}.bind(this), 1000);
+	},
+	timeOut: function(){
+		setTimeout(function(){
+			console.log("\n=========================\nSET TIME OUT WIHTOUT BIND\n=========================\n");
+			console.log("Hi " + this.firstName + " not bind");
+		}, 1000);
 	}
 }
 
@@ -27,5 +34,6 @@ console.log("\n==============\nPASS SOME ARGS\n==============\n");
 var hanaAdd2 = llorch.addition.bind(hana, 1, 2);
 hanaAdd2(3, 4);
 
-console.log("\n=============\nSET TIME OUT\n=============\n");
 llorch.bindTimeOut();
+
+llorch.timeOut();
